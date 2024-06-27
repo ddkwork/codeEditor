@@ -9,6 +9,6 @@ import (
 
 func main() {
 	app.Run("codeEditor", func(w *unison.Window) {
-		codeEditor.New().Layout(w.Content())
+		w.Content().AddChild(codeEditor.New().Layout())
 	})
 }
